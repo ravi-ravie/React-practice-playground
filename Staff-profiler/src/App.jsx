@@ -6,6 +6,17 @@ const App = () => {
         return (
             <div className="parent">
                 <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
             </div>
         )
 }
