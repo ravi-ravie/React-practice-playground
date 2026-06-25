@@ -1,15 +1,13 @@
-import React from 'react'
+import Card from "./components/Card"
+
 
 const App = () => {
-  let arr = [10,20,30,40,50]
-  
-  return (
-	<div>
-	{arr.map(function(elem){
-		return <h1>{elem*2}</h1>
-	})}
-  </div>
-  )
+    const data = [{book:'Metamorphosis', author:'franz'},{book:'Crime and Punishment', author:'dostoevsky'},{book:'The prince', author:'machiavelli'}]
+        return (
+            <div className="parent">
+                <Card />
+            </div>
+        )
 }
 
 export default App
