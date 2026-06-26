@@ -1,28 +1,35 @@
 import React from 'react'
-import { Building2 } from 'lucide-react';
+import { Building2 , User } from 'lucide-react';
 
-const Card = () => {
+const iconMap = {
+  user : User,
+  building2 : Building2
+}
+
+const Card = ({profile}) => {
+  const Icon = iconMap[profile.icon]
+  
   return (
     <div className="child">
         <div className="top">
-            <span className='status'>available</span>
-            <span>$55/hr</span>
+            {profile.available && <span className='status'>{profile.available}</span>}
+            <span>{profile.pay}</span>
         </div>
 
         <div className="mid">
-            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""  />
-            <p className='user'>Wade wilson</p>
-            <p className='post'>UI/UX designer</p>
-            <p className='employment'><Building2 size={12}/>Epic Coders</p>
+            <img src={profile.img} alt=""  />
+            <p className='user'>{profile.name}</p>
+            <p className='post'>{profile.post}</p>
+            <p className='employment'><Icon size={12}/>{profile.employment}</p>
             <div className="tags">
-              <span>UI</span>
-              <span>UX</span>
-              <span>Photoshop</span>
-              <span>+4</span>
+              <span>{profile.skill[0]}</span>
+              <span>{profile.skill[1]}</span>
+              <span>{profile.skill[2]}</span>
+              <span className='more'>+{profile.skill.length-3}</span>
             </div>
 
             <p className="discription">
-              Wade is a 32 year old UI/UX designer, with an impressive porfolio behind him.
+              {profile.description}
             </p>
         </div>
         <div className="bottom">
