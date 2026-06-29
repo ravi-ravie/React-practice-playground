@@ -1,11 +1,12 @@
 import React from 'react'
 import ScrolledCards from '../ScrolledCards'
+import UpperImg from '../UpperImg'
 
 const MainContent = () => {
   return (
-    <div className='grid grid-rows-2 py-5 gap-5 h-full'>
-      <div className='bg-red-500  bg-teal-400'>box1</div>
-
+    <div className='grid grid-rows-2 mt-8 pb-14 gap-5 h-full'>
+      <UpperImg />
+        
       <ScrolledCards />
     </div>
   )
