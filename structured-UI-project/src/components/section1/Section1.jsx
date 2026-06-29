@@ -4,7 +4,7 @@ import MainContent from './MainContent'
 
 const Section1 = () => {
   return (
-    <div className='font-serif p-8 h-screen overflow-hidden'>
+    <div className='font-sans p-8 h-screen bg-[#f6f6f6] overflow-hidden'>
       <Navbar />
       <MainContent/>
     </div>
