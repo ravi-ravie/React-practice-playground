@@ -7,7 +7,7 @@ const UpperImg = () => {
       <div className='flex flex-1 flex-col justify-center items-start gap-2'>
         <button className='bg-[#e3dbf0] border-2 border-[#bcb4c9] text-sm py-1 px-2.5 rounded-full'>Mind-Body-Soul Balance</button>
         <h1 className='text-6xl font-semibold'>Achieve balance in mind, body, and soul.</h1>
-        <p className='mt-6 font-medium'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus recusandae minus voluptatum saepe blanditiis mollitia?</p>
+        <p className='mt-6'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus recusandae minus voluptatum saepe blanditiis mollitia?</p>
       </div>
 
       <div className='flex-1'>
