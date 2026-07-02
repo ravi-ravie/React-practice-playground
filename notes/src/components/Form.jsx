@@ -1,14 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Form = () => {
+  const [title, setTitle] = useState('')
+  const [content, setContent] = useState('');
+
+  const [notes, setNotes] = useState([])
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    
+  const noteCopy = [...notes]
+  noteCopy.push({title, content})
+  setNotes(noteCopy)
+  console.log(notes)
+  }
+
   return (
     <div className='bg-gray-600'>
-        <form action="" className='flex flex-col items-start'>
 
-            <input type="text" placeholder='Note title...'/>
-            <textarea placeholder='Write your note...'></textarea>
+        <form className='flex flex-col items-start'>
 
-            <button>+ add note</button>
+            <input className='bg-gray-300' type="text" placeholder='Note title...' value={title} onChange={(e)=>{
+              setTitle(e.target.value)
+            }}/>
+            <textarea className='bg-gray-500' placeholder='Write your note...' value={content} onChange={(e)=>{
+              setContent(e.target.value)
+            }} ></textarea>
+
+            <button onClick={(e)=>{
+              submitForm(e)
+            }} className='bg-gray-100'>+ add note</button>
             
         </form>
     </div>

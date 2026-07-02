@@ -1,14 +1,16 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Form from './components/Form'
-import Notes from './components/notes'
+import StackNotes from './components/StackNotes'
 
 const App = () => {
   return (
-    <div className='bg-gray-400 h-screen'>
+    <div className='sm:h-screen '>
       <Navbar />
-      <Form />
-      <Notes />
+      <div className='max-w-4xl'>
+        <Form />
+        <StackNotes />
+      </div>
     </div>
   )
 }
