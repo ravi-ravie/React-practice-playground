@@ -1,20 +1,14 @@
 import React from 'react'
 
-const StackNotes = () => {
+const StackNotes = (props) => {
   return (
     <div className='bg-gray-200 flex gap-3'>
-        <div>
-            <div>title</div>
-            <div>Content</div>
-        </div>
-        <div>
-            <div>title</div>
-            <div>Content</div>
-        </div>
-        <div>
-            <div>title</div>
-            <div>Content</div>
-        </div>
+        {props.notes.map((note, idx) => (
+            <div>
+                <div>{note.title}</div>
+                <div>{note.content}</div>
+            </div>
+        ))}
     </div>
   )
 }

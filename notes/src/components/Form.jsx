@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
 
-const Form = () => {
+const Form = (props) => {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('');
 
-  const [notes, setNotes] = useState([])
 
   const submitForm = (e) => {
     e.preventDefault();
     
-  const noteCopy = [...notes]
+  const noteCopy = [...props.notes]
   noteCopy.push({title, content})
-  setNotes(noteCopy)
-  console.log(notes)
+  props.setNotes(noteCopy)
+  
+  setTitle('')
+  setContent('')
   }
 
   return (
