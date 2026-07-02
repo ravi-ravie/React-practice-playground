@@ -13,7 +13,7 @@ const App = () => {
       <Navbar />
       <div className='max-w-4xl'>
         <Form notes={notes} setNotes={setNotes}/>
-        <StackNotes notes={notes} />
+        <StackNotes notes={notes} setNotes={setNotes}/>
       </div>
     </div>
   )
